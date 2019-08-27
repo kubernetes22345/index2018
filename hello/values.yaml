@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: ashokshingade24/hello
-  tag: latest
+  repository: nginx
+  tag: stable
   pullPolicy: IfNotPresent
 
 service:
