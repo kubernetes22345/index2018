@@ -42,11 +42,7 @@ podTemplate(
         def app
         stage ('Docker') {
             container ('docker') {
-                //def registryIp = sh(script: 'getent hosts registry.kube-system | awk \'{ print $1 ; exit }\'', returnStdout: true).trim()
-                //repository = "https://registry.hub.docker.com/ashokshingade24/hello"
                 app = docker.build("rohan4494/hello:${commitId}")
-                //sh "docker build -t ashokshingade24/hello:${commitId} ."
-                //sh "docker push ${repository}:${commitId}"
                 docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
                     app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
