@@ -51,7 +51,7 @@ podTemplate(
         }
         stage ('Deploy') {
            input "Deploy?"
-           milestone()
+           milestone(1)
            node {
              echo "Deploying"
            }
