@@ -43,7 +43,7 @@ podTemplate(
         stage ('Docker') {
             container ('docker') {
                 app = docker.build("rohan4494/hello:${commitId}")
-                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+                docker.withRegistry('https://165942629469.dkr.ecr.us-east-1.amazonaws.com/rohan-jenkins-cicd-repo', 'rohan-jenkins-cicd-repo') {
                     app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
                 }
