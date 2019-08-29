@@ -52,9 +52,7 @@ podTemplate(
         stage ('Deploy') {
            input "Deploy?"
            milestone(1)
-           node('mypod') {
-             echo "Deploying"
-           }
+           echo "Deploying"
             container ('helm') {
                 sh "/helm init --client-only --skip-refresh"
                 sh "/helm upgrade --install --wait --set image.repository=rohan4494/hello,image.tag=${env.BUILD_NUMBER} hello hello"
