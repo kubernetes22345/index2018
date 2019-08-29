@@ -52,7 +52,7 @@ podTemplate(
         stage ('Deploy') {
            input "Deploy?"
            milestone(1)
-           node {
+           node('mypod') {
              echo "Deploying"
            }
             container ('helm') {
