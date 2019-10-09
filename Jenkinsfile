@@ -43,7 +43,7 @@ podTemplate(
         stage ('Docker') {
             container ('docker') {
                 app = docker.build("rohan4494/hello:${commitId}")
-                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+                docker.withRegistry('https://registry.hub.docker.com', 'docker_hub_login') {
                     app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
                 }
