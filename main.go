@@ -11,7 +11,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if found != "" {
 		name = found
 	} else {
-		name = "Jenkins"
+		name = "World"
 	}
 	fmt.Fprintf(w, "Hello %s!", name)
 }
