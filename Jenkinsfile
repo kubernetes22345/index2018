@@ -1,6 +1,6 @@
 podTemplate(
-    cloud: 'app04d1-dev-maxedge-eks-01-cluster',
-    label: 'mypod', 
+    cloud: 'eg-testing-eks-cluster',
+    label: 'test-helm', 
     inheritFrom: 'default',
     containers: [
         containerTemplate(
@@ -29,7 +29,7 @@ podTemplate(
         )
     ]
 ) {
-    node('mypod') {
+    node('test-helm') {
         def commitId
         stage ('Extract') {
             checkout scm
