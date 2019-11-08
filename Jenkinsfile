@@ -1,6 +1,6 @@
 podTemplate(
     cloud: 'eg-testing-eks-cluster',
-    label: 'jenkins-master', 
+    label: 'test-helm', 
     inheritFrom: 'default',
     containers: [
         containerTemplate(
@@ -29,7 +29,7 @@ podTemplate(
         )
     ]
 ) {
-    node('jenkins-master') {
+    node('test-helm') {
         def commitId
         stage ('Extract') {
             checkout scm
