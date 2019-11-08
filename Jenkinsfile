@@ -1,4 +1,5 @@
 podTemplate(
+    cloud: 'app04d1-dev-maxedge-eks-01-cluster',
     label: 'mypod', 
     inheritFrom: 'default',
     containers: [
