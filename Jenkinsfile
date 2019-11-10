@@ -38,9 +38,9 @@ pipeline {
                 success {
                     mail to:"rohan.nayakwadi@nov.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Yay, we passed."
                     }
-                    failure {
-                        mail to:"rohan.nayakwadi@nov.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
-                        }
+                failure {
+                    mail to:"rohan.nayakwadi@nov.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
+                    }
             }
         }
     }
