@@ -31,7 +31,7 @@ pipeline {
                 sh "helm upgrade --install --wait --set image.repository=rohan4494/hello,image.tag=${env.BUILD_NUMBER} hello hello --namespace jenkins-master"
             }
         }
-        post {
+        stage('post') {
             always {
                 deleteDir()
                 }
