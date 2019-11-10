@@ -1,6 +1,6 @@
 podTemplate(
     cloud: 'eg-testing-eks-cluster',
-    label: 'elastic-agent', 
+    label: 'helm-deploy-slave', 
     inheritFrom: 'default',
     containers: [
         containerTemplate(
@@ -29,7 +29,7 @@ podTemplate(
         )
     ]
 ) {
-    node('elastic-agent') {
+    node('helm-deploy-slave') {
         def commitId
         stage ('Extract') {
             checkout scm
