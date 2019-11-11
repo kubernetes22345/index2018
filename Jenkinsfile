@@ -14,6 +14,11 @@ podTemplate(
             image: 'docker:18.02',
             ttyEnabled: true,
             command: 'cat'
+        ), containerTemplate(
+            name: 'kubectl', 
+            image: 'lachlanevenson/k8s-kubectl:v1.6.6', 
+            ttyEnabled: true, 
+            command: 'cat'
         ),
         containerTemplate(
             name: 'helm', 
