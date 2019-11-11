@@ -1,6 +1,6 @@
 podTemplate(
     cloud: 'app04d1-dev-maxedge-eks-01-cluster',
-    label: 'jenkins-master', 
+    label: 'dev', 
     inheritFrom: 'default',
     containers: [
         containerTemplate(
@@ -34,7 +34,7 @@ podTemplate(
         )
     ]
 ) {
-    node('jenkins-master') {
+    node('dev') {
         def commitId
         stage ('Extract') {
             checkout scm
