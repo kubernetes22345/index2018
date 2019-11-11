@@ -1,6 +1,6 @@
 podTemplate(
     cloud: 'app04d1-dev-maxedge-eks-01-cluster',
-    label: 'abc', 
+    label: 'jenkins-master', 
     inheritFrom: 'default',
     containers: [
         containerTemplate(
