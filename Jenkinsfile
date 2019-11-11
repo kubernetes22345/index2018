@@ -1,6 +1,6 @@
 podTemplate(
-    cloud: 'kubernetes',
-    label: 'mypod', 
+    cloud: 'app04t1-test-eks01-cluster',
+    label: 'abc', 
     inheritFrom: 'default',
     containers: [
         containerTemplate(
@@ -34,7 +34,7 @@ podTemplate(
         )
     ]
 ) {
-    node('mypod') {
+    node('abc') {
         def commitId
         stage ('Extract') {
             checkout scm
