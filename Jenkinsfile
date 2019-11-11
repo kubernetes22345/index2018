@@ -1,5 +1,5 @@
 podTemplate(
-    cloud: 'app04t1-test-eks01-cluster',
+    cloud: 'app04d1-dev-maxedge-eks-01-cluster',
     label: 'abc', 
     inheritFrom: 'default',
     containers: [
