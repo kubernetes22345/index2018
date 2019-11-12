@@ -1,6 +1,6 @@
 podTemplate(
     cloud: 'kubernetes-default',
-    label: 'elastic-agent', 
+    label: 'jenkins-master', 
     inheritFrom: 'default',
     containers: [
         containerTemplate(
