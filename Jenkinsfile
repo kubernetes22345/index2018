@@ -34,7 +34,7 @@ podTemplate(
         )
     ]
 ) {
-    node('dev') {
+    node('jenkins-master') {
         def commitId
         stage ('Extract') {
             checkout scm
