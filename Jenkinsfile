@@ -1,5 +1,5 @@
 podTemplate(
-    cloud: 'kubernetes',
+    cloud: 'eg-testing-eks-cluster',
     label: 'dev', 
     inheritFrom: 'default',
     containers: [
