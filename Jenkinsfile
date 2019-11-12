@@ -1,6 +1,6 @@
 podTemplate(
-    cloud: 'eg-testing-eks-cluster',
-    label: 'elastic-agent', 
+    //cloud: 'eg-testing-eks-cluster',
+    //label: 'elastic-agent', 
     inheritFrom: 'default',
     containers: [
         containerTemplate(
@@ -34,7 +34,7 @@ podTemplate(
         )
     ]
 ) {
-    node('elastic-agent') {
+    node('jenkins-master') {
         def commitId
         stage ('Extract') {
             checkout scm
