@@ -1,6 +1,6 @@
 podTemplate(
     cloud: 'eg-testing-eks-cluster',
-    label: 'dev', 
+    label: 'elastic-agent', 
     inheritFrom: 'default',
     containers: [
         containerTemplate(
