@@ -61,7 +61,7 @@ podTemplate(
            echo "Deploying"
             container ('helm') {
                 //sh "kubectl get ns"
-                sh "helm init --client-only --skip-refresh"
+                // sh "helm init --client-only --skip-refresh"
                 sh "helm ls"
                 sh "helm upgrade --install --wait --set image.repository=rohan4494/hello,image.tag=latest hello hello"
             }
