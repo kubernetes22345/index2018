@@ -63,6 +63,7 @@ podTemplate(
                 //sh "kubectl get ns"
                 // sh "helm init --client-only --skip-refresh"
                 sh "helm ls"
+                sh "helm install grafana stable/grafana"
                 sh "helm upgrade --install --force --set image.repository=rohan4494/hello,image.tag=latest hello hello "
             }
         }
