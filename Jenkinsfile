@@ -22,7 +22,7 @@ podTemplate(
         ),
         containerTemplate(
             name: 'helm', 
-            image: 'ibmcom/k8s-helm:v2.6.0',
+            image: 'alpine/helm',
             ttyEnabled: true,
             command: 'cat'
         )
